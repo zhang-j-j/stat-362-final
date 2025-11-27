@@ -902,6 +902,21 @@ files = [
 all = ["flake8 (>=7.1.1)", "mypy (>=1.11.2)", "pytest (>=8.3.2)", "ruff (>=0.6.2)"]
 
 [[package]]
+name = "iprogress"
+version = "0.4"
+description = "Text progress bar library for Python."
+optional = false
+python-versions = "*"
+groups = ["main"]
+files = [
+    {file = "IProgress-0.4-py3-none-any.whl", hash = "sha256:098ba92780bf0eb3f2f3a0d4109e48d1f3c8ba57d821c6838f9ccb73e4fdc576"},
+    {file = "IProgress-0.4.tar.gz", hash = "sha256:55c6bce8ad4401889330fb1125c0bf7810bfbfe0105c058f861ae91e962d51eb"},
+]
+
+[package.dependencies]
+six = "*"
+
+[[package]]
 name = "ipykernel"
 version = "7.1.0"
 description = "IPython Kernel for Jupyter"
@@ -3265,6 +3280,21 @@ files = [
 tests = ["pytest", "pytest-cov"]
 
 [[package]]
+name = "tf-keras"
+version = "2.20.1"
+description = "Deep learning for humans."
+optional = false
+python-versions = ">=3.9"
+groups = ["main"]
+files = [
+    {file = "tf_keras-2.20.1-py3-none-any.whl", hash = "sha256:3f0e0a34d9a4c8758f24fdc1053e6e335f16ab5534c7d34f1899b8924779760c"},
+    {file = "tf_keras-2.20.1.tar.gz", hash = "sha256:884be5938fb0b2b53b1583c1ae2b660ef87215377c29b5b6a77fd221b472aeaf"},
+]
+
+[package.dependencies]
+tensorflow = ">=2.20,<2.21"
+
+[[package]]
 name = "threadpoolctl"
 version = "3.6.0"
 description = "threadpoolctl"
@@ -3780,4 +3810,4 @@ scikit-learn = ["scikit-learn"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.12,<3.15"
-content-hash = "57f8db35909a699758332d5eefc3b215af11a8188b71895aabaeb672e155f2b5"
+content-hash = "c5acc1ccc92955edebd7c13de3bc626603b85664d54054f393fe512231ae20d0"
