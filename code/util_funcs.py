@@ -44,3 +44,26 @@ def load_split_data(path, random_state=42):
 
     return X_train, X_val, X_test, y_train, y_val, y_test
 
+def sentence_embeddings(data, model):
+    """
+    Generate sentence embeddings for baseline models.
+
+    Args:
+        data (tuple): Tuple containing training, validation, and test data
+        model: SentenceTransformer model
+
+    Returns:
+        X_train_emb: Training embeddings
+        X_val_emb: Validation embeddings
+        X_test_emb: Test embeddings
+    """
+    X_train, X_val, X_test = data
+    X_train_emb = model.encode(X_train, show_progress_bar=True, convert_to_numpy=True)
+    X_val_emb = model.encode(X_val, show_progress_bar=True, convert_to_numpy=True)
+    X_test_emb = model.encode(X_test, show_progress_bar=True, convert_to_numpy=True)
+
+    print(f"Training embeddings shape: {X_train_emb.shape}")
+    print(f"Validation embeddings shape: {X_val_emb.shape}")
+    print(f"Test embeddings shape: {X_test_emb.shape}")
+    return X_train_emb, X_val_emb, X_test_emb
+
