@@ -66,4 +66,3 @@ def sentence_embeddings(data, model):
     print(f"Validation embeddings shape: {X_val_emb.shape}")
     print(f"Test embeddings shape: {X_test_emb.shape}")
     return X_train_emb, X_val_emb, X_test_emb
-
